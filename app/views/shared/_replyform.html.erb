@@ -1,0 +1,17 @@
+<%= form_for([@post,@reply]) do |f|%>
+  <table>
+    <tr>
+        <td> <%= f.label :membername%></td> 
+        <td> <%= f.text_field :membername%></td> 
+    </tr>
+    <tr>   
+        <td> <%= f.label :password%></td> 
+        <td> <%= f.text_field :password%></td> 
+    </tr>   
+    <tr>    
+       <td>  <%= f.label :inpost%></td> 
+        <td> <%= f.text_field :inpost%>  </td> 
+    </tr>
+  </table>
+  <%= f.submit %>
+<%end%>

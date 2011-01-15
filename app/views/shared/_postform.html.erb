@@ -1,0 +1,5 @@
+<%= form_for( @post||current_user.posts.build) do |f|%>
+  <%= f.label :link%>
+  <%= f.text_field :link%>
+  <%= f.submit %>
+<%end%>

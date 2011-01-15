@@ -1,0 +1,16 @@
+<div>
+  <table>
+    <tr>
+      <td>
+      <h3><%= post.link%></h3>
+      <%= render :partial =>'shared/reply', :collection=> post.replies%>
+      </td>
+      <td>
+      <%=button_to 'add reply', new_post_reply_path(post), {:method =>"get"}%>
+
+          <%=button_to 'remove', post_path(post), {:method =>"delete"}%>
+      </td>
+    </tr>
+   </table>
+  
+ </div>
