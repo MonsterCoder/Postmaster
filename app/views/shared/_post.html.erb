@@ -9,6 +9,7 @@
       <%=button_to 'add reply', new_post_reply_path(post), {:method =>"get"}%>
 
           <%=button_to 'remove', post_path(post), {:method =>"delete"}%>
+          <%=button_to 'Reply', run_post_path(post), {:method=>:get}%>
       </td>
     </tr>
    </table>

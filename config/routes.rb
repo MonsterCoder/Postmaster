@@ -7,6 +7,7 @@ Postmaster::Application.routes.draw do
   
   resources :posts do
         resources :replies
+        get 'run', :on=>:member
   end
 
   # The priority is based upon order of creation:

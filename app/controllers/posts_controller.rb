@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  include PostsHelper
   def new
   end
   
@@ -21,4 +22,9 @@ class PostsController < ApplicationController
       redirect_to :back
   end
 
+  def run
+    post=  current_user.posts.find_by_id(params[:id])
+    replypost(post)
+    redirect_to :back, :notice=>'Replied successfully.'
+  end
 end
