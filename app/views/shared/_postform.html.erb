@@ -1,5 +1,11 @@
 <%= form_for( @post||current_user.posts.build) do |f|%>
-  <%= f.label :link%>
-  <%= f.text_field :link%>
+<div>
+  <%= f.label :subject%>
+  <%= f.text_field :subject%><br/>
+    <%= f.label :forum%>
+  <%= f.text_field :forum%><br/>
+    <%= f.label :topic%>
+  <%= f.text_field :topic%>
+  </div>
   <%= f.submit %>
 <%end%>

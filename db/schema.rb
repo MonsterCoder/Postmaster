@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110115073711) do
+ActiveRecord::Schema.define(:version => 20110115200727) do
 
   create_table "homes", :force => true do |t|
     t.datetime "created_at"
@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(:version => 20110115073711) do
   create_table "posts", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "link"
     t.integer  "user_id"
+    t.string   "subject"
+    t.integer  "forum"
+    t.integer  "topic"
   end
 
   create_table "replies", :force => true do |t|

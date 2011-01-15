@@ -14,7 +14,9 @@ module PostsHelper
         'Submit'=>'submit',
       }
       
-      @x = Net::HTTP.post_form(URI.parse(post.link), params) 
+      link = "http://163.ca/cgi-bin/lb5000/post.cgi?action=reply&forum=#{post.forum}&topic=#{post.topic}"
+      
+      @x = Net::HTTP.post_form(URI.parse(link), params) 
  
     end
   end

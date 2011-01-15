@@ -2,8 +2,13 @@
   <table>
     <tr>
       <td>
-      <h3><%= post.link%></h3>
-      <%= render :partial =>'shared/reply', :collection=> post.replies%>
+      <h3><%= post.subject%></h3>
+      forum:<%= post.forum%></br>
+      topic:<%= post.topic%></br>
+      <div>
+       
+        <%= render :partial =>'shared/reply', :collection=> post.replies%>
+      <div>
       </td>
       <td>
       <%=button_to 'add reply', new_post_reply_path(post), {:method =>"get"}%>
