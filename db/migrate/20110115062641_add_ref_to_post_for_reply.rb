@@ -4,6 +4,6 @@ class AddRefToPostForReply < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :replies, :post_id,
+    remove_column :replies, :post_id
   end
 end
