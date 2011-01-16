@@ -21,15 +21,25 @@ class PostsController < ApplicationController
       current_user.posts.delete(post)
       redirect_to :back
   end
+  
+  def dowork
+    posts = Post.find(:all)
+    posts.each { |post|
+      if !checkpage(post)
+        replypost(post) 
+        p "replied at #{Time.now.to_s}"
+      end
+    }
+  end
 
   def run
     post=  current_user.posts.find_by_id(params[:id])
     replypost(post)
-    p "replied at #{Time.now.to_s}"
   end
   
   def check
     post=  current_user.posts.find_by_id(params[:id])
     firstpage = checkpage(post)
   end
+  
 end

@@ -1,0 +1,9 @@
+<h2>Welcome to postermaster</h2>
+You are logged in as <%=current_user.email%>
+
+
+  <div>
+    <%= render :partial=>'shared/post', :collection =>current_user.posts%>
+    <%= render :partial=>'shared/postform'%>
+  </div>
+
