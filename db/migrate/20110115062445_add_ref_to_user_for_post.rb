@@ -4,6 +4,6 @@ class AddRefToUserForPost < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :posts, :user_id
+ 
   end
 end
