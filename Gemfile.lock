@@ -37,6 +37,7 @@ GEM
       warden (~> 1.0.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    hpricot (0.8.3)
     i18n (0.5.0)
     mail (2.2.14)
       activesupport (>= 2.3.6)
@@ -44,6 +45,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    nokogiri (1.4.4)
     orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -80,6 +82,8 @@ PLATFORMS
 
 DEPENDENCIES
   devise (= 1.2.rc)
+  hpricot
+  nokogiri
   rails (= 3.0.3)
   rufus-scheduler
   sqlite3-ruby

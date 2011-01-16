@@ -15,6 +15,7 @@
 
           <%=button_to 'remove', post_path(post), {:method =>"delete"}%>
           <%=button_to 'Reply', run_post_path(post), {:method=>:get}%>
+          <%=button_to 'check', check_post_path(post), {:method=>:get}%>
       </td>
     </tr>
    </table>

@@ -25,6 +25,11 @@ class PostsController < ApplicationController
   def run
     post=  current_user.posts.find_by_id(params[:id])
     replypost(post)
-    redirect_to :back, :notice=>'Replied successfully.'
+    p "replied at #{Time.now.to_s}"
+  end
+  
+  def check
+    post=  current_user.posts.find_by_id(params[:id])
+    firstpage = checkpage(post)
   end
 end
