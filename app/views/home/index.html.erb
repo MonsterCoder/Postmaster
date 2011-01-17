@@ -5,5 +5,6 @@ You are logged in as <%=current_user.email%>
   <div>
     <%= render :partial=>'shared/post', :collection =>current_user.posts%>
     <%= render :partial=>'shared/postform'%>
+    <%=button_to 'process posts', :process_posts, {:method=>:get}%>
   </div>
 

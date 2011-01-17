@@ -25,21 +25,23 @@ class PostsController < ApplicationController
   def dowork
     posts = Post.find(:all)
     posts.each { |post|
-      if !checkpage(post)
-        replypost(post) 
-        p "replied at #{Time.now.to_s}"
-      end
+        replypost(post) unless checkpage(post)
+
     }
+    
+    redirect_to :back, :notice=>"did work"
   end
 
   def run
     post=  current_user.posts.find_by_id(params[:id])
     replypost(post)
+    #redirect_to :back, :notice=>"replied"
   end
   
   def check
     post=  current_user.posts.find_by_id(params[:id])
     firstpage = checkpage(post)
+    redirect_to :back, :notice=>"First page: #{firstpage}"
   end
   
 end

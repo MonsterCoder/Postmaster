@@ -13,7 +13,7 @@ module PostsHelper
               'topic'=>post.topic,
               'membername'=>reply.membername,
               'password'=>reply.password,
-              'inpost'=>reply.inpost,
+              'inpost'=>reply.inpost+ " #{Time.now}",
               'Submit'=>'submit',
             }
             
@@ -22,6 +22,7 @@ module PostsHelper
             @x = Net::HTTP.post_form(URI.parse(link), params) 
  
           end
+          p "replied #{post.to_s}}"
   end
   
   def checkpage(post)

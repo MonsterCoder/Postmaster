@@ -11,6 +11,7 @@ Postmaster::Application.routes.draw do
   
   get "home/index"
 
+  match 'process_posts' => 'posts#dowork', :as => :process_posts
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
